@@ -1,0 +1,5 @@
+[submodule "verl"]
+	path = verl
+	url = ssh://git@gitlab.pjlab.org.cn:1122/chenyongkang/verl-bootcampv2.git
+	branch = verl
+

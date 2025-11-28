@@ -1,0 +1,4 @@
+interaction:
+  - name: "gsm8k"
+    class_name: "internbootcamp.bootcamps.gsm8k.gsm8k_interaction.Gsm8kInteraction"
+    config: {}

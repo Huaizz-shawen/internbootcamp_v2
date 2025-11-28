@@ -1,0 +1,45 @@
+# Example Instruction Manager 配置
+# 支持多组配置和不同的生成比例
+
+instruction_generators:
+  l1:
+    config:
+      difficulty: "l1"
+      num_vertices: [8, 12]
+      num_colors: [4, 6]
+      edge_density: 0.2
+      generation_ratio: 1
+  l2:
+    config:
+      difficulty: "l2"
+      num_vertices: [12, 16]
+      num_colors: [6, 8]
+      edge_density: 0.2
+      generation_ratio: 1
+  l3:
+    config:
+      difficulty: "l3"
+      num_vertices: [16, 20]
+      num_colors: [8, 10]
+      edge_density: 0.2
+      generation_ratio: 1
+# 全局配置
+global_config:
+# 指令管理器类的完整相对路径
+  class_name: "internbootcamp.bootcamps.NP_MM.GCP_D.instruction_generator.NpGcpDInstructionGenerator"
+  # 是否启用随机种子
+  enable_random_seed: true
+  
+  # 默认种子值
+  default_seed: 999
+  
+  # 默认数据集划分和样本数
+  default_split_samples:
+    train: 10
+    test: 10
+  
+  # 是否启用数据打乱
+  shuffle: true
+
+  # 是否生成parquet文件
+  gen_parquet: true

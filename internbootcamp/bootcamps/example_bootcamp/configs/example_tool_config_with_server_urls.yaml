@@ -1,0 +1,34 @@
+tools:
+- class_name: internbootcamp.src.base_mcp_tool.BaseMCPTool
+  config:
+    type: native
+    mcp_server_url: http://100.103.25.9:20045/ArithmeticTool
+    timeout_per_query: 30
+  tool_schema:
+    type: function
+    function:
+      name: arithmetic_options
+      description: A tool for performing basic arithmetic operations such as addition,
+        subtraction, multiplication, and division.
+      parameters:
+        type: object
+        properties:
+          operation:
+            type: string
+            description: The arithmetic operation to perform. Possible values are
+              'add', 'subtract', 'multiply', 'divide'.
+            enum:
+            - add
+            - subtract
+            - multiply
+            - divide
+          operand1:
+            type: number
+            description: The first operand in the arithmetic operation.
+          operand2:
+            type: number
+            description: The second operand in the arithmetic operation.
+        required:
+        - operation
+        - operand1
+        - operand2
