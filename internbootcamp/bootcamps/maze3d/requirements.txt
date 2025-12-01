@@ -1,0 +1,22 @@
+# 3D Maze RLVR Bootcamp Requirements
+# Install with: pip install -r requirements.txt
+
+# Core dependencies
+numpy>=1.24.0
+matplotlib>=3.7.0
+pyyaml>=6.0
+tqdm>=4.65.0
+pillow>=10.0.0
+datasets>=2.14.0
+
+# API and web frameworks
+starlette>=0.27.0
+pydantic>=2.0.0
+openai>=1.0.0
+urllib3>=2.0.0
+click>=8.1.0
+requests>=2.31.0
+
+# Optional dependencies (uncomment if needed):
+# uvicorn>=0.23.0  # For tool server
+# For VERL training, install separately from the VERL repository

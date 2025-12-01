@@ -12,11 +12,19 @@ _QAGenerator = None
 _get_plot_level = None
 _draw_puzzle = None
 
+def _add_3d_maze_to_path():
+    """Add 3d_maze directory to sys.path"""
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    repo_root = os.path.abspath(os.path.join(current_dir, '../../..'))
+    maze_3d_path = os.path.join(repo_root, '3d_maze_origin')
+    if maze_3d_path not in sys.path:
+        sys.path.insert(0, maze_3d_path)
+
 def _ensure_imports():
     """Lazy import of 3d_maze modules"""
     global _puzzle_generator_imported, _PuzzleGenerator, _QAGenerator, _get_plot_level, _draw_puzzle
     if not _puzzle_generator_imported:
-        sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../../3d_maze'))
+        _add_3d_maze_to_path()
         from main import PuzzleGenerator, QAGenerator, get_plot_level, draw_puzzle
         _PuzzleGenerator = PuzzleGenerator
         _QAGenerator = QAGenerator
@@ -281,8 +289,7 @@ Determine which direction to take at each branch point to successfully reach the
 
     def _get_path_finding_answer(self, puzzle) -> str:
         """Get correct answer for path-finding puzzle"""
-        # Import at runtime to avoid circular imports
-        sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../../3d_maze'))
+        _add_3d_maze_to_path()
         from main import get_branch_order, get_path_direction, Position
 
         def get_main_path_direction_at_branch(branch_pos, path):
@@ -322,7 +329,7 @@ Determine the correct order in which you encounter these numbered checkpoints wh
 
     def _get_sequence_answer(self, puzzle) -> str:
         """Get correct answer for sequence-finding puzzle"""
-        sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../../3d_maze'))
+        _add_3d_maze_to_path()
         from main import get_ordered_path_cubes
 
         ordered_cubes = get_ordered_path_cubes(puzzle.path)
@@ -344,7 +351,7 @@ For example: "1 < 2 = 3" means point 1 is lowest, and points 2 and 3 are at the 
 
     def _get_height_comparison_answer(self, puzzle) -> str:
         """Get correct answer for height comparison puzzle"""
-        sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../../3d_maze'))
+        _add_3d_maze_to_path()
         from main import normalize_height_relation
 
         heights = [(p.label, p.pos.z) for p in puzzle.sequence_points]
@@ -353,7 +360,7 @@ For example: "1 < 2 = 3" means point 1 is lowest, and points 2 and 3 are at the 
     def _generate_main_path_question(self, puzzle) -> str:
         """Generate main path question"""
         # Add labels to cubes for this question type
-        sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../../3d_maze'))
+        _add_3d_maze_to_path()
         from main import get_ordered_path_cubes, Branch
 
         cubes_remove = puzzle.cubes.copy()
@@ -376,7 +383,7 @@ Answer with the block numbers separated by commas, or "None" if no numbered bloc
 
     def _get_main_path_answer(self, puzzle) -> str:
         """Get correct answer for main path puzzle"""
-        sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../../3d_maze'))
+        _add_3d_maze_to_path()
         from main import get_ordered_path_cubes
 
         main_path_cubes = get_ordered_path_cubes(puzzle.path)

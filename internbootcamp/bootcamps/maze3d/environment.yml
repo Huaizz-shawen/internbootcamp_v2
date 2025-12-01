@@ -9,4 +9,20 @@ dependencies:
   - matplotlib
   - pyyaml
   - pip:
-    - asyncio
+    # Core dependencies for data generation
+    - tqdm
+    - pillow
+    - pyyaml
+    - datasets
+
+    # API and web frameworks
+    - starlette
+    - pydantic
+    - openai
+    - urllib3
+    - click
+    - requests
+
+    # Optional: for full evaluation support
+    - uvicorn  # Only needed for tool server
+    - verl     # Only needed for RL training
