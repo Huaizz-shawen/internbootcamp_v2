@@ -1,0 +1,90 @@
+tools:
+  - type: function
+    function:
+      name: move
+      description: Move in a specified direction (X or Y axis) by a given distance. You can only move on top of cubes. Use this to navigate horizontally through the maze.
+      parameters:
+        type: object
+        properties:
+          direction:
+            type: string
+            description: "Direction to move: 'left', 'right', 'forward', 'backward', '+x', '-x', '+y', or '-y'"
+            enum: ["left", "right", "forward", "backward", "+x", "-x", "+y", "-y"]
+          distance:
+            type: integer
+            description: Number of units to move in the specified direction (usually 1 or 2)
+            default: 1
+        required:
+          - direction
+
+  - type: function
+    function:
+      name: climb
+      description: Climb a ladder at your current position to move upward in the Z axis. A ladder must exist at your current position.
+      parameters:
+        type: object
+        properties:
+          height:
+            type: integer
+            description: The height to climb (must match the ladder's height)
+        required:
+          - height
+
+  - type: function
+    function:
+      name: check_position
+      description: Get your current position, start position, and goal position in the maze
+      parameters:
+        type: object
+        properties: {}
+
+  - type: function
+    function:
+      name: get_height
+      description: Get the height (z-coordinate) of your current position or a specific (x, y) location
+      parameters:
+        type: object
+        properties:
+          x:
+            type: integer
+            description: X coordinate to check (optional, uses current position if not specified)
+          y:
+            type: integer
+            description: Y coordinate to check (optional, uses current position if not specified)
+
+  - type: function
+    function:
+      name: describe_surroundings
+      description: Get information about nearby cubes and ladders from your current position
+      parameters:
+        type: object
+        properties: {}
+
+  - type: function
+    function:
+      name: analyze_path
+      description: Analyze whether a proposed sequence of moves is physically valid before executing them
+      parameters:
+        type: object
+        properties:
+          moves:
+            type: array
+            description: Array of move actions to validate
+            items:
+              type: object
+              properties:
+                action:
+                  type: string
+                  description: "Type of action: 'move' or 'climb'"
+                  enum: ["move", "climb"]
+                direction:
+                  type: string
+                  description: "Direction for move action (required if action is 'move')"
+                distance:
+                  type: integer
+                  description: "Distance for move action (default: 1)"
+                height:
+                  type: integer
+                  description: "Height for climb action (required if action is 'climb')"
+        required:
+          - moves

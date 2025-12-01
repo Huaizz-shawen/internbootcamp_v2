@@ -1,0 +1,12 @@
+name: maze3d
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - matplotlib
+  - pyyaml
+  - pip:
+    - asyncio

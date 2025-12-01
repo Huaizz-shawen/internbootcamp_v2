@@ -1,0 +1,64 @@
+# Configuration for 3D Maze Instruction Generation
+
+# Instruction generator class
+instruction_generator_class: "internbootcamp.bootcamps.maze3d.maze3d_instruction_generator.Maze3DInstructionGenerator"
+
+# Configuration groups for different puzzle difficulties
+config_groups:
+  - name: "easy_path_finding"
+    weight: 0.25  # 25% of generated puzzles
+    config:
+      grid_size: [6, 6, 5]
+      puzzle_types: ["path_finding"]
+      main_path_length: [3, 5]
+      side_path_num: [2, 3]
+      side_path_length: [1, 2]
+      save_images: false
+      seed: null
+
+  - name: "medium_path_finding"
+    weight: 0.25
+    config:
+      grid_size: [8, 8, 7]
+      puzzle_types: ["path_finding"]
+      main_path_length: [5, 7]
+      side_path_num: [3, 4]
+      side_path_length: [1, 2]
+      save_images: false
+      seed: null
+
+  - name: "sequence_finding"
+    weight: 0.2
+    config:
+      grid_size: [8, 8, 7]
+      puzzle_types: ["sequence_finding"]
+      main_path_length: [5, 7]
+      label_num_range: [3, 4]
+      save_images: false
+      seed: null
+
+  - name: "height_comparison"
+    weight: 0.15
+    config:
+      grid_size: [8, 8, 7]
+      puzzle_types: ["height_comparison"]
+      main_path_length: [5, 7]
+      label_num_range: [3, 3]
+      save_images: false
+      seed: null
+
+  - name: "main_path"
+    weight: 0.15
+    config:
+      grid_size: [8, 8, 7]
+      puzzle_types: ["main_path"]
+      main_path_length: [5, 7]
+      side_path_num: [3, 4]
+      side_path_length: [1, 2]
+      save_images: false
+      seed: null
+
+# Global settings
+global_settings:
+  output_dir: "maze3d_dataset"
+  save_visualization: true  # Set to true to save puzzle images
