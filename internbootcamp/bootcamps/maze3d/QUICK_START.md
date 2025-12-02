@@ -4,24 +4,37 @@
 
 ### Step 1: Generate Data (30 seconds)
 
+## env setup
+```bash
+conda env create -f environment.yml
+```
+
+### Step 1: Generate Data (30 seconds)
+
 ```bash
 conda activate maze3d
-cd /media/user/B29202FA9202C2B91/internbootcamp_v2
+cd /xxx/internbootcamp_v2
 python internbootcamp/bootcamps/maze3d/examples/generate_data.py
 ```
+
 
 **Output:** `maze3d_training_data.jsonl` (100 puzzles)
 
 ### Step 2: Test with LLM (2 minutes)
 
+# 1. 设置新的 API Key 环境变量
 ```bash
-export OPENAI_API_KEY="sk-your-key-here"
+export INF_API_KEY="stpmj/4hRawPjQCf0fk70W6HnObgXtkonX3qHCCNsPc="
+```
 
+```bash
+# 2. 运行评测脚本
 python -m internbootcamp.utils.run_evaluation \
     --dataset-path maze3d_training_data.jsonl \
     --output-dir results/maze3d/ \
-    --api-key $OPENAI_API_KEY \
-    --api-model "gpt-4o-mini" \
+    --api-key $INF_API_KEY \
+    --api-url "https://heke889hhd88c5bcm8p5bo8d5g8k98kb.openapi-sj.sii.edu.cn/v1" \
+    --api-model "qwen3-next" \
     --reward-calculator-class "internbootcamp.bootcamps.maze3d.maze3d_reward_calculator.Maze3DRewardCalculator" \
     --tool-config "internbootcamp/bootcamps/maze3d/configs/tools_config.yaml" \
     --max-assistant-turns 20 \
