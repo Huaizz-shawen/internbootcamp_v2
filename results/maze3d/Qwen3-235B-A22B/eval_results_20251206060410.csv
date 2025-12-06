@@ -1,0 +1,137 @@
+Basic Evaluation Information
+Item,Value
+Evaluation Model,Qwen3-235B-A22B
+Dataset Path,maze3d_dataset/instruction_config.yaml_20251205130421_train.jsonl
+Tool Configuration,internbootcamp/bootcamps/maze3d/configs/tools_config.yaml
+Output Path,results/maze3d/Qwen3-235B-A22B/eval_results_20251206060410.jsonl
+Max Assistant Turns,20
+Max User Turns,
+api_extra_params,{}
+api_extra_headers,{}
+
+Overall Statistics
+Metric,Value
+Total Samples,100
+Successful Samples,0
+Failed Samples,100
+Success Rate,0.00%
+Overall Average Score,0.0000
+
+Data Source Summary Statistics
+Data Source,Total Samples,,Success Count,Failed Count,Success Rate,Average Score,Max Score,Min Score,Avg Assistant Turns,Avg Tool Calls,Avg Interaction Turns,Avg Initial Prompt Tokens,Avg Completion Tokens,Avg Global Sequence Tokens,Avg Cumulative Prompt Tokens,Avg Total Tokens
+bootcamp/Maze3D,100,,0,100,0.00%,0.0000,0.0000,0.0000,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+
+Generator Detailed Statistics
+Data Source,Generator Name,Sample Count,Success Count,Failed Count,Success Rate,Average Score,Max Score,Min Score,Avg Assistant Turns,Avg Tool Calls,Avg Interaction Turns,Avg Initial Prompt Tokens,Avg Completion Tokens,Avg Cumulative Prompt Tokens,Avg Global Sequence Tokens,Avg Total Tokens
+bootcamp/Maze3D,easy_path_finding,25,0,25,0.00%,0.0000,0.0000,0.0000,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+bootcamp/Maze3D,height_comparison,15,0,15,0.00%,0.0000,0.0000,0.0000,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+bootcamp/Maze3D,main_path,15,0,15,0.00%,0.0000,0.0000,0.0000,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+bootcamp/Maze3D,medium_path_finding,25,0,25,0.00%,0.0000,0.0000,0.0000,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+bootcamp/Maze3D,sequence_finding,20,0,20,0.00%,0.0000,0.0000,0.0000,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+
+Error Type Statistics
+Error Type,Occurrence Count
+"Error code: 400 - {'error': {'message': '""auto"" to",100
+
+Detailed Error Information
+Generator Name,Data Source,Sample ID,Error Message
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+sequence_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+main_path,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+sequence_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+sequence_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+height_comparison,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+height_comparison,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+main_path,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+main_path,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+height_comparison,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+sequence_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+sequence_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+height_comparison,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+height_comparison,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+main_path,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+sequence_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+height_comparison,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+sequence_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+main_path,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+sequence_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+main_path,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+sequence_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+main_path,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+height_comparison,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+main_path,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+sequence_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+sequence_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+sequence_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+sequence_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+main_path,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+height_comparison,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+main_path,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+height_comparison,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+height_comparison,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+sequence_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+main_path,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+sequence_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+sequence_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+main_path,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+height_comparison,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+main_path,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+sequence_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+sequence_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+height_comparison,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+main_path,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+height_comparison,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+height_comparison,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+sequence_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+sequence_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+height_comparison,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+main_path,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+medium_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"
+easy_path_finding,bootcamp/Maze3D,Unknown,"Error code: 400 - {'error': {'message': '""auto"" tool choice requires --enable-auto-tool-choice and --tool-call-parser to be set', 'type': 'BadRequestError', 'param': None, 'code': 400}}"

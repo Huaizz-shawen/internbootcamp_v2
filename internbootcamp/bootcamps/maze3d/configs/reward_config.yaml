@@ -5,13 +5,13 @@ reward_calculator_class: "internbootcamp.bootcamps.maze3d.maze3d_reward_calculat
 
 # Enable/disable each reward level
 enable_level1_outcome: true     # Level 1: Final answer correctness
-enable_level2_physics: true     # Level 2: Physics & logic verification (RLVR core)
-enable_level3_state: true       # Level 3: State tracking accuracy
+enable_level2_physics: false     # Level 2: Physics & logic verification (RLVR core)
+enable_level3_state: false      # Level 3: State tracking accuracy
 
 # Weights for each reward level (should sum to 1.0)
-weight_level1: 0.4  # Outcome reward weight
-weight_level2: 0.4  # Physics/logic reward weight
-weight_level3: 0.2  # State tracking reward weight
+weight_level1: 1.0  # Outcome reward weight
+weight_level2: 0.0  # Physics/logic reward weight
+weight_level3: 0.0  # State tracking reward weight
 
 # Additional reward parameters
 soft_reward: false  # Use soft rewards for partial correctness

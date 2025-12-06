@@ -1,0 +1,31 @@
+Basic Evaluation Information
+Item,Value
+Evaluation Model,qwen2.5-vl-72b
+Dataset Path,maze3d_dataset/instruction_config.yaml_20251201205303_train.jsonl
+Tool Configuration,internbootcamp/bootcamps/maze3d/configs/tools_config.yaml
+Output Path,results/maze3d/qwen2.5-vl-72b/eval_results_20251203075239.jsonl
+Max Assistant Turns,20
+Max User Turns,5
+api_extra_params,{}
+api_extra_headers,{}
+
+Overall Statistics
+Metric,Value
+Total Samples,100
+Successful Samples,100
+Failed Samples,0
+Success Rate,100.00%
+Overall Average Score,0.0060
+
+Data Source Summary Statistics
+Data Source,Total Samples,,Success Count,Failed Count,Success Rate,Average Score,Max Score,Min Score,Avg Assistant Turns,Avg Tool Calls,Avg Interaction Turns,Avg Initial Prompt Tokens,Avg Completion Tokens,Avg Global Sequence Tokens,Avg Cumulative Prompt Tokens,Avg Total Tokens
+bootcamp/Maze3D,100,,100,0,100.00%,0.0060,0.1000,0.0000,1.00,0.00,1.00,429.35,138.11,567.46,429.35,567.46
+
+Generator Detailed Statistics
+Data Source,Generator Name,Sample Count,Success Count,Failed Count,Success Rate,Average Score,Max Score,Min Score,Avg Assistant Turns,Avg Tool Calls,Avg Interaction Turns,Avg Initial Prompt Tokens,Avg Completion Tokens,Avg Cumulative Prompt Tokens,Avg Global Sequence Tokens,Avg Total Tokens
+bootcamp/Maze3D,easy_path_finding,25,25,0,100.00%,0.0080,0.1000,0.0000,1.00,0.00,1.00,430.00,209.64,639.64,430.00,639.64
+bootcamp/Maze3D,height_comparison,15,15,0,100.00%,0.0000,0.0000,0.0000,1.00,0.00,1.00,445.00,53.27,498.27,445.00,498.27
+bootcamp/Maze3D,main_path,15,15,0,100.00%,0.0067,0.1000,0.0000,1.00,0.00,1.00,432.00,287.27,719.27,432.00,719.27
+bootcamp/Maze3D,medium_path_finding,25,25,0,100.00%,0.0080,0.1000,0.0000,1.00,0.00,1.00,430.00,83.68,513.68,430.00,513.68
+bootcamp/Maze3D,sequence_finding,20,20,0,100.00%,0.0050,0.1000,0.0000,1.00,0.00,1.00,414.00,68.50,482.50,414.00,482.50
+

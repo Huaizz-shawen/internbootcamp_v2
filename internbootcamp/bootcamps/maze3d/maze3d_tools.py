@@ -9,8 +9,8 @@ from internbootcamp.src.base_tool import BaseTool
 from verl.tools.schemas import OpenAIFunctionToolSchema
 from verl.utils.rollout_trace import rollout_trace_op
 
-# Add 3d_maze to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../../3d_maze'))
+# Add 3d_maze_origin to path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../../3d_maze_origin'))
 from main import Position, is_path_valid
 
 logger = logging.getLogger(__name__)

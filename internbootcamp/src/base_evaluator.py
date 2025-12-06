@@ -1260,17 +1260,26 @@ class BaseEvaluator:
             for data_source, stats in report_data["data_source_stats"].items():
                 success_rate = stats["success_count"] / stats["total_count"] if stats["total_count"] > 0 else 0
 
+                # Format values first to avoid f-string nesting issues
+                avg_score = f'{stats["avg_score"]:.4f}'
+                max_score = f'{stats["max_score"]:.4f}'
+                min_score = f'{stats["min_score"]:.4f}'
+                avg_assistant_turns = f'{stats["avg_assistant_turns"]:.2f}'
+                avg_tool_calls = f'{stats["avg_tool_calls"]:.2f}'
+                avg_interaction_turns = f'{stats["avg_interaction_turns"]:.2f}'
+                avg_completion_tokens = f'{stats["avg_completion_tokens"]:.2f}'
+
                 row = (
                     f"{data_source:<{col_widths['source']}} "
                     f"{center_value(str(stats['total_count']), col_widths['samples'])} "
                     f"{center_value(f'{success_rate:.1%}', col_widths['success'])} "
-                    f"{center_value(f'{stats['avg_score']:.4f}', col_widths['avg_score'])} "
-                    f"{center_value(f'{stats['max_score']:.4f}', col_widths['max_score'])} "
-                    f"{center_value(f'{stats['min_score']:.4f}', col_widths['min_score'])} "
-                    f"{center_value(f'{stats['avg_assistant_turns']:.2f}', col_widths['avg_assistant_turns'])} "
-                    f"{center_value(f'{stats['avg_tool_calls']:.2f}', col_widths['avg_tool_calls'])} "
-                    f"{center_value(f'{stats['avg_interaction_turns']:.2f}', col_widths['avg_interaction_turns'])} "
-                    f"{center_value(f'{stats['avg_completion_tokens']:.2f}', col_widths['avg_completion_tokens'])}"
+                    f"{center_value(avg_score, col_widths['avg_score'])} "
+                    f"{center_value(max_score, col_widths['max_score'])} "
+                    f"{center_value(min_score, col_widths['min_score'])} "
+                    f"{center_value(avg_assistant_turns, col_widths['avg_assistant_turns'])} "
+                    f"{center_value(avg_tool_calls, col_widths['avg_tool_calls'])} "
+                    f"{center_value(avg_interaction_turns, col_widths['avg_interaction_turns'])} "
+                    f"{center_value(avg_completion_tokens, col_widths['avg_completion_tokens'])}"
                 )
                 print(row)
                 
@@ -1286,21 +1295,30 @@ class BaseEvaluator:
                         gen_success_rate = gen_stats["success_count"] / gen_stats["total_count"] if gen_stats["total_count"] > 0 else 0
                         is_last = (idx == len(stats["generators"]) - 1)
                         prefix = "  ● "
-                        
+
                         # Adjust generator name width to account for prefix
                         gen_name_width = col_widths['source'] - len(prefix)
+
+                        # Format values first to avoid f-string nesting issues
+                        gen_avg_score = f'{gen_stats["avg_score"]:.4f}'
+                        gen_max_score = f'{gen_stats["max_score"]:.4f}'
+                        gen_min_score = f'{gen_stats["min_score"]:.4f}'
+                        gen_avg_assistant_turns = f'{gen_stats["avg_assistant_turns"]:.2f}'
+                        gen_avg_tool_calls = f'{gen_stats["avg_tool_calls"]:.2f}'
+                        gen_avg_interaction_turns = f'{gen_stats["avg_interaction_turns"]:.2f}'
+                        gen_avg_completion_tokens = f'{gen_stats["avg_completion_tokens"]:.2f}'
 
                         gen_row = (
                             f"{prefix}{generator_name:<{gen_name_width}} "
                             f"{center_value(str(gen_stats['total_count']), col_widths['samples'])} "
                             f"{center_value(f'{gen_success_rate:.1%}', col_widths['success'])} "
-                            f"{center_value(f'{gen_stats['avg_score']:.4f}', col_widths['avg_score'])} "
-                            f"{center_value(f'{gen_stats['max_score']:.4f}', col_widths['max_score'])} "
-                            f"{center_value(f'{gen_stats['min_score']:.4f}', col_widths['min_score'])} "
-                            f"{center_value(f'{gen_stats['avg_assistant_turns']:.2f}', col_widths['avg_assistant_turns'])} "
-                            f"{center_value(f'{gen_stats['avg_tool_calls']:.2f}', col_widths['avg_tool_calls'])} "
-                            f"{center_value(f'{gen_stats['avg_interaction_turns']:.2f}', col_widths['avg_interaction_turns'])} "
-                            f"{center_value(f'{gen_stats['avg_completion_tokens']:.2f}', col_widths['avg_completion_tokens'])}"
+                            f"{center_value(gen_avg_score, col_widths['avg_score'])} "
+                            f"{center_value(gen_max_score, col_widths['max_score'])} "
+                            f"{center_value(gen_min_score, col_widths['min_score'])} "
+                            f"{center_value(gen_avg_assistant_turns, col_widths['avg_assistant_turns'])} "
+                            f"{center_value(gen_avg_tool_calls, col_widths['avg_tool_calls'])} "
+                            f"{center_value(gen_avg_interaction_turns, col_widths['avg_interaction_turns'])} "
+                            f"{center_value(gen_avg_completion_tokens, col_widths['avg_completion_tokens'])}"
                         )
                         print(gen_row)
                     print(f"{'-'*159}")

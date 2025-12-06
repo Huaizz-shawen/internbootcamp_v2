@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(source ~/miniconda3/etc/profile.d/conda.sh)",
+      "Bash(conda activate maze3d)",
+      "Bash(python -c \"import openai; print(f''openai version: {openai.__version__}'')\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

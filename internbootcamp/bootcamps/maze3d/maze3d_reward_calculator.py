@@ -9,7 +9,7 @@ from internbootcamp.src.base_reward_calculator import BaseRewardCalculator
 # Lazy import - will be loaded when needed
 def _get_maze_modules():
     """Lazy import of 3d_maze modules"""
-    sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../../3d_maze'))
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../../3d_maze_origin'))
     from main import Position, is_path_valid
     return Position, is_path_valid
 

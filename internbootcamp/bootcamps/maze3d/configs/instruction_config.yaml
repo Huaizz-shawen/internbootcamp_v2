@@ -14,7 +14,7 @@ instruction_generators:
       main_path_length: [3, 5]
       side_path_num: [2, 3]
       side_path_length: [1, 2]
-      save_images: false
+      save_images: true
       seed: null
 
   medium_path_finding:
@@ -25,7 +25,7 @@ instruction_generators:
       main_path_length: [5, 7]
       side_path_num: [3, 4]
       side_path_length: [1, 2]
-      save_images: false
+      save_images: true
       seed: null
 
   sequence_finding:
@@ -35,7 +35,7 @@ instruction_generators:
       puzzle_types: ["sequence_finding"]
       main_path_length: [5, 7]
       label_num_range: [3, 4]
-      save_images: false
+      save_images: true
       seed: null
 
   height_comparison:
@@ -45,7 +45,7 @@ instruction_generators:
       puzzle_types: ["height_comparison"]
       main_path_length: [5, 7]
       label_num_range: [3, 3]
-      save_images: false
+      save_images: true
       seed: null
 
   main_path:
@@ -56,5 +56,5 @@ instruction_generators:
       main_path_length: [5, 7]
       side_path_num: [3, 4]
       side_path_length: [1, 2]
-      save_images: false
+      save_images: true
       seed: null
